@@ -2,11 +2,12 @@
   "name": "Eat-Da-Burger",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
-    "mysql2": "^2.2.5"
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5"
   },
   "devDependencies": {},
   "scripts": {
