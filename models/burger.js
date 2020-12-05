@@ -2,13 +2,13 @@ const orm = require('../config/orm.js')
 
 const burger = {
   selectAll(cb) {
-    orm.selectAll('users', users => cb(users))
+    orm.selectAll('burgers', burgers => cb(burgers))
   },
-  insterOne(user, cb) {
-    orm.insterOne('users', user, () => cb())
+  insertOne(burger, cb) {
+    orm.insertOne('burgers', burger, () => cb())
   },
   updateOne(changes, id, cb) {
-    orm.updateOne('users', changes, { id }, () => cb())
+    orm.updateOne('burgers', changes, { id }, () => cb())
   }
 }
 

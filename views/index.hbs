@@ -1,33 +1,52 @@
-<h1>Eat da Burger</h1>
+<body>
 
-<div class="container">
-  <div class="row">
-    <form>
-      <p>
-        <label for="name">name</label>
-        <input type="text" name="name" id="name">
-      </p>
-      <p>
-        <button id="addUser">Add User</button>
-      </p>
-    </form>
+  <div class="mx-auto" style="width: 400px;">
+    <h1>Eat da Burger</h1>
+    <img ID="burgerPic" src="../assets/img/1200px-RedDot_Burger.jpg" alt="Cheeseburger">
   </div>
-  <div class="row">
-    <div class="col-md-6">
-      <h4>Not Present</h4>
-      {{#each users}}
-      {{#unless this.isHere}}
-      <p class="isHere" data-id="{{this.id}}">{{ this.name }}</p>
-      {{/unless}}
-      {{/each}}
+  <div class="container">
+    <hr>
+    <div class="row">Welcome to your very own burger tracking app.  Personalize this app by entering burgers you would like to try.  Once you have devoured the burger, simply click on the burger to move it to the devoured column.  
+      <hr>
     </div>
-    <div class="col-md-6">
-      <h4>Present</h4>
-      {{#each users}}
-      {{#if this.isHere}}
-      <p class="delete" data-id="{{this.id}}">{{ this.name }}</p>
-      {{/if}}
-      {{/each}}
+    <div class="row">
+      <div class="col-sm-2">
+     
+      </div>
+      <div class="col-sm-6">
+        <form>
+          <p>
+            <label ID="textEntryLable" for="burger">Burger you'd like to devoure:</label>
+            <input type="text" name="burger" ID="burger">
+            <button id="addBurger">Add Burger</button>
+          </p>
+        </form>
+      </div>
+      <div class="col-sm-2">
+      
+      </div>
     </div>
   </div>
-</div>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Burgers I Want to Eat</h4>
+        {{#each burgers}}
+        {{#unless this.devoured}}
+        <p class="devoured" data-id="{{this.id}}">{{ this.burger_name }}</p>
+        {{/unless}}
+        {{/each}}
+      </div>
+      <div class="col-md-6">
+        <h4>Burgers I Have Devoured</h4>
+        {{#each burgers}}
+        {{#if this.devoured}}
+        <p class="delete" data-id="{{this.id}}">{{ this.burger_name }}</p>
+        {{/if}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</body>

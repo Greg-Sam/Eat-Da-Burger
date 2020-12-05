@@ -1,0 +1,17 @@
+body {
+  background-color: rgb(231, 198, 167);
+}
+
+#burgerPic {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 245px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#textEntryLable {
+  color: red;
+  font-size: large;
+}

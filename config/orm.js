@@ -7,7 +7,7 @@ const orm = {
       cb(data)
     })
   },
-  insterOne(table, data, cb) {
+  insertOne(table, data, cb) {
     connection.query(`INSERT INTO ${table} SET ?`, data, err => {
       if (err) { console.log(err) }
       cb()
