@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(231, 198, 167);
+  background-color: #9c9cf8;
 }
 
 #burgerPic {
@@ -12,6 +12,6 @@ body {
 }
 
 #textEntryLable {
-  color: red;
+  color: rgb(175, 82, 82);
   font-size: large;
 }
