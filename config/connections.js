@@ -1,4 +1,4 @@
 const mysql = require('mysql2')
-const connection = mysql.createConnection('mysql://root:MySQL1!@localhost/burgers_db')
+const connection = mysql.createConnection(process.env.JAWSDB_URL || 'mysql://root:MySQL1!@localhost/burgers_db')
 
 module.exports = connection
